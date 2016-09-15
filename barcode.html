@@ -1,0 +1,24 @@
+---
+layout: markerapp
+title: Default Barcode AR Markers
+---
+
+<ul class="barcodes-swipeable">
+{% for i in (0..63) %}
+  {% assign title = i %}
+  {% assign srcImage = i | prepend: '/img/barcode-markers/' | append: '.png' %}
+  {% include marker.html type="barcode" markerID=i title=title src=srcImage  %}
+{% endfor %}
+</ul>
+
+<div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <select name="barcode-select" class="barcode-select form-control">
+        {% for i in (0..63) %}
+        <option value="{{ i }}">Barcode {{ i }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </form>
+</div>

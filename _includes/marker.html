@@ -1,0 +1,6 @@
+<li class="marker-item">
+  {% assign imgTitle = include.title  %}
+  {% assign imgPath = include.src  %}
+  <img class="marker marker-square marker-barcode" src="{{ imgPath | prepend: site.github.url }}" />
+  <span class="markerID hidden" >{{ imgTitle }}</span>
+</li>

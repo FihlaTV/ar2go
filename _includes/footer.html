@@ -1,0 +1,29 @@
+<footer class="site-footer container">
+  <hr />
+  <div class="row">
+
+    <div class="col-md-3">
+      <ul class="social-media-list list-inline">
+        {% if site.github_project_link %}
+        <li>
+          {% include icon-github.html projectname=site.github_project_name projectlink=site.github_project_link %}
+        </li>
+        {% endif %}
+
+        {% if site.twitter_username %}
+        <li>
+          {% include icon-twitter.html username=site.twitter_username %}
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="col-md-6">
+      <p>{{ site.description }}</p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>

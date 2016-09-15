@@ -1,0 +1,41 @@
+// Bootstrap Breakpoints:
+
+/* Custom, iPhone Retina */
+$break-tiny: 320px;
+
+/* Extra Small Devices, Phones */
+$break-extra-small: 480px;
+
+/* Small Devices, Tablets */
+$break-small: 768px;
+
+/* Medium Devices, Desktops */
+$break-medium: 768px;
+
+/* Large Devices, Wide Screens */
+$break-large: 1200px;
+
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (min-width: $break-extra-small) { @content; }
+  }
+  @if $media == tablets {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+// Example usage
+// .profile-pic {
+//   float: left;
+//   width: 250px;
+//   @include respond-to(handhelds) { width: 100% ;}
+//   @include respond-to(medium) { width: 125px; }
+//   @include respond-to(wide) { float: none; }
+// }

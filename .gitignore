@@ -1,0 +1,9 @@
+npm-debug.log
+.dropbox
+.sass-cache
+.jekyll-metadata
+.DS_Store
+*.lock
+_site/
+node_modules
+build

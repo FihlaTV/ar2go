@@ -1,0 +1,105 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+/////////////////////
+@import 'media-queries';
+
+$vrGraphicWhite: url('data:image/svg+xml,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20viewBox%3D"0%200%20245.82%20141.73"><defs><style>.a%7Bfill%3A%23fff%3Bfill-rule%3Aevenodd%3B%7D<%2Fstyle><%2Fdefs><title>mask<%2Ftitle><path%20class%3D"a"%20d%3D"M175.56%2C111.37c-22.52%2C0-40.77-18.84-40.77-42.07S153%2C27.24%2C175.56%2C27.24s40.77%2C18.84%2C40.77%2C42.07S198.08%2C111.37%2C175.56%2C111.37ZM26.84%2C69.31c0-23.23%2C18.25-42.07%2C40.77-42.07s40.77%2C18.84%2C40.77%2C42.07-18.26%2C42.07-40.77%2C42.07S26.84%2C92.54%2C26.84%2C69.31ZM27.27%2C0C11.54%2C0%2C0%2C12.34%2C0%2C28.58V110.9c0%2C16.24%2C11.54%2C30.83%2C27.27%2C30.83H99.57c2.17%2C0%2C4.19-1.83%2C5.4-3.7L116.47%2C118a8%2C8%2C0%2C0%2C1%2C12.52-.18l11.51%2C20.34c1.2%2C1.86%2C3.22%2C3.61%2C5.39%2C3.61h72.29c15.74%2C0%2C27.63-14.6%2C27.63-30.83V28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z"%2F><%2Fsvg>');
+$vrGraphicGrey:  url('data:image/svg+xml,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20viewBox%3D"0%200%20245.82%20141.73"><defs><style>.a%7Bfill%3A%23828282%3Bfill-rule%3Aevenodd%3B%7D<%2Fstyle><%2Fdefs><title>mask<%2Ftitle><path%20class%3D"a"%20d%3D"M175.56%2C111.37c-22.52%2C0-40.77-18.84-40.77-42.07S153%2C27.24%2C175.56%2C27.24s40.77%2C18.84%2C40.77%2C42.07S198.08%2C111.37%2C175.56%2C111.37ZM26.84%2C69.31c0-23.23%2C18.25-42.07%2C40.77-42.07s40.77%2C18.84%2C40.77%2C42.07-18.26%2C42.07-40.77%2C42.07S26.84%2C92.54%2C26.84%2C69.31ZM27.27%2C0C11.54%2C0%2C0%2C12.34%2C0%2C28.58V110.9c0%2C16.24%2C11.54%2C30.83%2C27.27%2C30.83H99.57c2.17%2C0%2C4.19-1.83%2C5.4-3.7L116.47%2C118a8%2C8%2C0%2C0%2C1%2C12.52-.18l11.51%2C20.34c1.2%2C1.86%2C3.22%2C3.61%2C5.39%2C3.61h72.29c15.74%2C0%2C27.63-14.6%2C27.63-30.83V28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z"%2F><%2Fsvg>');
+$vrGraphicBlue:  url('data:image/svg+xml,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20viewBox%3D"0%200%20245.82%20141.73"><defs><style>.a%7Bfill%3A%2324CAFF%3Bfill-rule%3Aevenodd%3B%7D<%2Fstyle><%2Fdefs><title>mask<%2Ftitle><path%20class%3D"a"%20d%3D"M175.56%2C111.37c-22.52%2C0-40.77-18.84-40.77-42.07S153%2C27.24%2C175.56%2C27.24s40.77%2C18.84%2C40.77%2C42.07S198.08%2C111.37%2C175.56%2C111.37ZM26.84%2C69.31c0-23.23%2C18.25-42.07%2C40.77-42.07s40.77%2C18.84%2C40.77%2C42.07-18.26%2C42.07-40.77%2C42.07S26.84%2C92.54%2C26.84%2C69.31ZM27.27%2C0C11.54%2C0%2C0%2C12.34%2C0%2C28.58V110.9c0%2C16.24%2C11.54%2C30.83%2C27.27%2C30.83H99.57c2.17%2C0%2C4.19-1.83%2C5.4-3.7L116.47%2C118a8%2C8%2C0%2C0%2C1%2C12.52-.18l11.51%2C20.34c1.2%2C1.86%2C3.22%2C3.61%2C5.39%2C3.61h72.29c15.74%2C0%2C27.63-14.6%2C27.63-30.83V28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z"%2F><%2Fsvg>');
+
+$primaryColor: #ef2d5e;
+$secondaryColor: #24CAFF;
+$secondaryDark: darken($secondaryColor, 20%);
+
+body {
+  // background-color: lighten($secondaryColor,35%);
+}
+
+hr {
+  border-top: 1px dotted $secondaryDark;
+}
+h1, h2, h3, .site-title.navbar-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+footer {
+  color: $grey-color;
+}
+
+.post-meta {
+  color: $secondaryDark;
+}
+
+.bumper {
+  background-color: #fff;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  margin-bottom: 2em;
+  border-bottom: 2px solid rgba(0,0,0, 0.125);
+
+  h1 {
+    font-size: 3em;
+    color: $secondaryDark;
+    @include respond-to(medium) {
+      padding-top: 0.5em;
+      font-size: 6em;
+    }
+  }
+
+  .container {
+    padding-left: 0;
+    @include respond-to(medium) {
+      padding-left: inherit;
+    }
+  }
+}
+
+.navbar-default {
+    background-color: $grey-color-light;
+    background-image: none;
+    border-color: #e7e7e7;
+    .navbar-nav > li > a,
+    a.navbar-brand {
+      // color: #fff;
+    }
+    .navbar-toggle {
+      .icon-bar {
+        // background-color: #fff;
+      }
+
+    }
+    &.no-bumper {
+      margin-bottom: 0
+    }
+}
+
+@import 'slider';
+@import 'markers';

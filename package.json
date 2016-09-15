@@ -1,0 +1,18 @@
+{
+  "name": "ar2go",
+  "version": "1.0.0",
+  "description": "Augmented Reality Mobile Markers",
+  "main": "index.js",
+  "scripts": {
+    "start": "jekyll liveserve",
+    "dev": "jekyll liveserve --host 0.0.0.0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "augmented reality",
+    "marker",
+    "jekyll"
+  ],
+  "author": "Eric Lawrence",
+  "license": "ISC"
+}

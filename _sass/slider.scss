@@ -1,0 +1,17 @@
+.layout-markerapp {
+  .bx-wrapper {
+    box-shadow: none;
+    margin-bottom: 2em;
+  }
+
+  .bx-controls {
+    position: absolute;
+    width: 100%;
+    background: yellow;
+    bottom: 0.5em;
+  }
+  .bx-pager.bx-default-pager {
+    font-weight: 100;
+
+  }
+}

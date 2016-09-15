@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+  <script src="{{ site.github.url }}/js/markers.js"></script>
+
+  <body class="layout-markerapp">
+
+    {% include header.html %}
+
+
+    {{ content }}
+
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

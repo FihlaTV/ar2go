@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="container bumper">
+  <div class="row">
+
+    <div class="col-md-6">
+      <h2 class="page-heading">AR Markers 2&nbsp;Go</h2>
+      <p>
+        AR2Go is a web-based/mobile-friendly display for
+        augmented reality markers compatible with projects
+        like&nbsp;<a href="http://artoolkit.org">ARToolKit</a>.
+      </p>
+      <p>
+        This site is an alternative to printing out augmented
+        reality tracking markers. It is also a good option for
+        low-light&nbsp;situations.
+      </p>
+
+      <div class="hidden-xs hidden-sm bg-danger">
+        <p style="padding: 1em; color: darkred;">
+          <b>Note:</b> The marker display is not yet optimized
+          for horizontal layouts (like desktops and phones in
+          landscape position). In the short term, please lock your
+          device in portrait orientation or use a narrow browser
+          window.
+        </p>
+      </div>
+
+    </div>
+    <div class="col-md-3">
+      <h2 class="hidden-xs hidden-sm">&nbsp;</h2>
+      <br class="visible-xs visible-sm" />
+      <p>
+        <a class="btn btn-default btn-lg btn-block" href="{{ site.github.url }}/barcode.html" role="button" style="text-align: left;">Barcode Markers</a>
+        <a class="btn btn-default btn-lg btn-block" href="{{ site.github.url }}/block.html" role="button" style="text-align: left;">Block Markers</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <h3 class="col-md-12">Updates:</h3>
+  </div>
+
+  <ul class="row post-list list-unstyled">
+    {% for post in site.posts %}
+      <li class="col-sm-4">
+        <div class="">
+          <h3>
+            <a class="post-link" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+          </h3>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          {{ post.excerpt }}
+          <p>
+            <em>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">read more...</a>
+            </em>
+            </p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a></p>
+
+</div>
