@@ -25,5 +25,9 @@
   </div>
 </footer>
 
+{% if site.google_analytics_id %}
+{% include google-analytics.html trackingID=site.google_analytics_id %}
+{% endif %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
