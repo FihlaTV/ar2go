@@ -1,27 +1,24 @@
 ---
 layout: markerapp
+title: Default AR Markers
 ---
 
-<!-- {% for i in site.data.markers.square %}
-  i: {{ i.title }}
-  <img src="{{i.src}}" alt="{{i.title}}" />
-  <br />
-{% endfor %} -->
-
-<ul class="barcodes-swipeable">
-  {% for m in site.data.markers.square %}
-      {% include marker.html type="block" markerID=i title=m.title src=m.src %}
-  {% endfor %}
-</ul>
-
-<div class="container-fluid">
-  <form>
-    <div class="form-group">
-      <select name="barcode-select" class="barcode-select form-control">
-        {% for m in site.data.markers.square %}
-        <option value="{{ forloop.index0 }}">Barcode {{ m.title }}</option>
-        {% endfor %}
-      </select>
-    </div>
-  </form>
+<div class="barcodes-swipeable-outer">
+  <ul class="barcodes-swipeable">
+    {% for m in site.data.markers.square %}
+        {% include marker.html type="block" markerID=i title=m.title src=m.src %}
+    {% endfor %}
+  </ul>
 </div>
+
+  <div class="container-fluid">
+    <form>
+      <div class="form-group">
+        <select name="barcode-select" class="barcode-select form-control">
+          {% for m in site.data.markers.square %}
+          <option value="{{ forloop.index0 }}">Barcode {{ m.title }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </form>
+  </div>
