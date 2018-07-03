@@ -4,5 +4,5 @@ title: Privacy Policy
 ---
 
 <div class="privacy-wrapper">
- Coming soon...
+ Coming soon
 </div>
